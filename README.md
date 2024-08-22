@@ -15,7 +15,21 @@ The current study explores various AI pipelines aimed at anticipating stages of 
 Figure 1: Encoding scalar time series data using the recurrent plot method and a fusion of three recurrent plots into either a recurrent plot image (ReIM) or channels of a red-green-blue image (RGB), and fit into different machine learning models for prediction of tipping point or stable events.  
 
 # 3. Image-based time-series representation methodologies
-- 3.1. Recurrent plot 
+Three different encoding methods, including the recurrent plot (PR), Gramian angular field (GAF), and Markov transition field (MTF), to generate time-series image-based representations from scalar time-series data were investigated. 
+For n observations, the time series x(t) is written below. 
+                                                                   x(t) = { x1, x2, x3, ….,xn}
+
+The main idea was that these encoding methods transform time-series data into high-dimensional image representations, facilitating the search for temporal correlations and transitions between data points. 
+
+# 3.1. Encoding time-series with recurrent plot method
+
+The recurrent plot (RP) method is a transformative technique where the elements in the matrix represent the actual distances between points in the time series (Marwan et al., 2007). This study constructed a recurrence plot image (ReIM) using the pairwise standardized Euclidean distance between elements of a time series x(t), which takes an account for the correspondent variance across the dimension of the original data (SciPy, 2008-2024). The condensed distance matrix was then converted into a square matrix form, generating a recurrent plot image (ReIM). 
+                                                                   dij= √(∑_(i=1)^j▒〖(x_i-x_j)〗^2/V_i )
+where dij is the distance matrix at a certain i row and j column, V_i is the dimensional variance of the time-series data for i row.
+
+                                                                   Recurrent Plot = RP [i, j] = dij
+                                      
+
 
 
 
