@@ -25,9 +25,8 @@ The main idea was that these encoding methods transform time-series data into hi
 
 The recurrent plot (RP) method is a transformative technique where the elements in the matrix represent the actual distances between points in the time series (Marwan et al., 2007). This study constructed a recurrence plot image (ReIM) using the pairwise standardized Euclidean distance between elements of a time series x(t), which takes an account for the correspondent variance across the dimension of the original data (SciPy, 2008-2024). The condensed distance matrix was then converted into a square matrix form, generating a recurrent plot image (ReIM). 
 
-
-                                                                   ![image](https://github.com/user-attachments/assets/427a5bb4-f4b0-4de7-9d3e-37970c1d87dc)
-
+                                                                  dij= √(∑_(i=1)^j▒〖(x_i-x_j)〗^2/V_i )
+                                                                   
 where dij is the distance matrix at a certain i row and j column, V_i is the dimensional variance of the time-series data for i row.
 
                                                                    Recurrent Plot = RP [i, j] = dij
@@ -52,9 +51,10 @@ Overall, the MTF method illustrates the relationship between two arbitrary point
 The current study employed a fusion of different encoding methods (RP, GASF, GADF, and MTF) to unravel complementary information embedded in time-series image representations and among the classifiers used (Dias, Pinto, et al., 2020). The early fusion method was implemented by assigning each encoded image representation to one of the three color channels of an RGB image. While this approach has been applied in other scientific research fields such as phenology (Dias, Pinto, et al., 2020; Faria et al., 2016), it has not been previously reported for time-series vector-borne diseases. 
 Mosquito vector-borne diseases typically consist of five compartments: mosquitoes infected (MI), birds infected (BI), birds recovered (BR), quinines infected (QI), and humans infected (HI). This study focused on three primary compartments: MI, BI, and BR. The time-series data of each of the three components were transformed using different encoding methods, and each encoded image was then fused into an RGB image. The order of fusion of each compartment plays a crucial role in generating different RGB images. 
 This research specifically examines the fusion of three recurrent plots into an RGB image and a combination of GASF, GADF, and MTF into an RGB image. For the combination fusion, the MI, BI, and BR compartments were assigned to the blue, green, and red channels, respectively.  
+
 ![image](https://github.com/user-attachments/assets/400d8828-c45b-475e-8c57-c0d3fd3519b4)
 
-
+Figure 2. Fusion of the three recurrent plots (a) and a combo of GASF, GADG, and MTF (b) into an RGB image
 
 
 
