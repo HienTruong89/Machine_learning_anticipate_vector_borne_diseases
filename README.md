@@ -12,6 +12,6 @@ The current study explores various AI pipelines aimed at anticipating stages of 
 
 ![image](https://github.com/user-attachments/assets/dead9dbb-9f6b-4d17-8b82-f538de266aae)
 
-Figure AI pineline 1: Encoding scalar time series data using the recurrent plot method and a fusion of three recurrent plots into either a recurrent plot image (ReIM) or channels of a red-green-blue image (RGB), and fit into different machine learning models for prediction of tipping point or stable events.  
+Figure 1: Encoding scalar time series data using the recurrent plot method and a fusion of three recurrent plots into either a recurrent plot image (ReIM) or channels of a red-green-blue image (RGB), and fit into different machine learning models for prediction of tipping point or stable events.  
 
 
