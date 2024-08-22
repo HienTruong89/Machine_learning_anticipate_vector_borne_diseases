@@ -14,4 +14,9 @@ The current study explores various AI pipelines aimed at anticipating stages of 
 
 Figure 1: Encoding scalar time series data using the recurrent plot method and a fusion of three recurrent plots into either a recurrent plot image (ReIM) or channels of a red-green-blue image (RGB), and fit into different machine learning models for prediction of tipping point or stable events.  
 
+# 3. Image-based time-series representation methodologies
+@ 3.1. Recurrent plot 
+
+
+
 
