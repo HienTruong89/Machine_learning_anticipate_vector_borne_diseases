@@ -13,7 +13,7 @@ The main idea was that these encoding methods transform time-series data into hi
 
 # 2.1. Encoding time-series with recurrent plot method
 
-The recurrent plot (RP) method is a transformative technique where the elements in the matrix represent the actual distances between points in the time series (Marwan et al., 2007). This study constructed a recurrence plot image (ReIM) using the pairwise standardized Euclidean distance between elements of a time series x(t), which takes an account for the correspondent variance across the dimension of the original data (SciPy, 2008-2024). The condensed distance matrix was then converted into a square matrix form, generating a recurrent plot image (ReIM). 
+The recurrent plot (RP) method is a transformative technique where the elements in the matrix represent the actual distances between points in the time series (Marwan et al., 2007). This study constructed a recurrence plot image (ReIM) using the pairwise standardized Euclidean distance between elements of a time series x(t), which takes an account for the correspondent variance across the dimension of the original data (SciPy, 2008-2024). The condensed distance matrix was then converted into a square matrix form, generating a recurrent plot image (ReIM).
 
                                                                   dij= √(∑(x_i-x_j)^2/V_i)
                                                                    
