@@ -31,6 +31,33 @@ The recurrent plot (RP) method is a transformative technique where the elements 
 where dij is the distance matrix at a certain i row and j column, V_i is the dimensional variance of the time-series data for i row.
 
                                                                    Recurrent Plot = RP [i, j] = dij
+
+# 3.2. Encoding time-series with Gramian Angular Field method
+Gramian Angular Field (GAF) is a method that converts time series data into an image based on the Gramian matrix (G = XTX). Before the transformation, the time series data points are normalized in the range of -1 and 1 and then converted into angular radians (∅) using inverse cosine function. There are two primary methods: summation and difference. The Gramian Angular Summation Field (GASF) calculates cosine-based summation between adjacent angular time steps, while the Gramian Angular Difference Field (GADF) focuses on differences in sine-based radians. Although GASF and GADF are opposite approaches, they both preserve temporal dependencies and emphasize both the amplitude and phase information in the original time series data (Dias, Dias, et al., 2020; Dias, Pinto, et al., 2020). 
+
+                                                                 〖GASF〗_(i,j)=cosine⁡〖 (∅_i+ ∅_j )〗
+                                                                 〖GADF〗_(i,j)=s⁡ine(∅_i- ∅_j )
+
+where ∅_i=arccos⁡〖(x_i 〗) and x_i is normalized to [ -1, 1]. 
+
+# 3.3. Encoding time-series with Markow Transition Field method 
+Markov Transition Field (MTF) is another encoding method that transforms a time series into an image using a Markov model. The time series is initially normalized to a range between 0 and 1 and then divided into quartiles or bins based on the normalized values. A Markov model sequentially encodes these bins into state transitions, computing the probability of transitioning from one state to another. The MTF matrix element at row i and column j is then calculated based on this probability transition matrix (Dias, Dias, et al., 2020; Dias, Pinto, et al., 2020).   
+
+                                                                 MTF [i,j] = P (st = j |st-1 = i)
+where MTF [i,j] represents the probability of transitioning from state i to state j. 
+
+Overall, the MTF method illustrates the relationship between two arbitrary points in the time series and how frequently these transitions occur. The MTF is sensitive to the choice of bin levels, which can affect the granularity of the original time series. 
+
+# 4. Early fusion approach for time-series images
+The current study employed a fusion of different encoding methods (RP, GASF, GADF, and MTF) to unravel complementary information embedded in time-series image representations and among the classifiers used (Dias, Pinto, et al., 2020). The early fusion method was implemented by assigning each encoded image representation to one of the three color channels of an RGB image. While this approach has been applied in other scientific research fields such as phenology (Dias, Pinto, et al., 2020; Faria et al., 2016), it has not been previously reported for time-series vector-borne diseases. 
+Mosquito vector-borne diseases typically consist of five compartments: mosquitoes infected (MI), birds infected (BI), birds recovered (BR), quinines infected (QI), and humans infected (HI). This study focused on three primary compartments: MI, BI, and BR. The time-series data of each of the three components were transformed using different encoding methods, and each encoded image was then fused into an RGB image. The order of fusion of each compartment plays a crucial role in generating different RGB images. 
+This research specifically examines the fusion of three recurrent plots into an RGB image and a combination of GASF, GADF, and MTF into an RGB image. For the combination fusion, the MI, BI, and BR compartments were assigned to the blue, green, and red channels, respectively.  
+![image](https://github.com/user-attachments/assets/400d8828-c45b-475e-8c57-c0d3fd3519b4)
+
+
+
+
+
                                       
 
 
