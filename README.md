@@ -61,19 +61,17 @@ In this study, we utilized different ImageNet architectures as feature extractor
 We employed six common ImageNet architectures in the current study, namely, VGG16, ResNet50, ResNet101, ResNet152, Xception, and Efficient_NetB5. These architectures differ in their neural network designs and transfer learning algorithms (Morid et al., 2020). Utilizing these pre-trained models can offer different approaches for training vector-borne time-series images, possibly reducing training time and improving performance compared to building neural networks from scratch. For more information on ImageNet and its advantages, and disadvantages, please refer to the Keras Applications on the Keras Applications website. 
 
 # 4.2. Traditional machine learning  
-This study employed five different traditional machine learning methods as classifiers based on practical experience and general knowledge. The methods included  Logistic Regression (LR), Random Forest (RF), K-Nearest Neighbor (KNN), and Support Vector Machine (SVM) with both linear and radial basic functions (rbf), used to classify various scenarios of vector-borne diseases. Table 1 provides a comparative overview of these five machine-learning methods. 
-Aspect	LR	RF	KNN	SVM (linear)	SVM (rbf)
-Description	Estimate Probability 	Construct multiple decision trees	The majority class among K-nearest neighbors	Find the linear line by maximizing the margin 	Find the rbf hyperplane by maximizing the margin
-Model Type	Linear	Ensemble (Tree-based)	Instance-based	Linear	Non-linear
-Complexity	Low	Medium-High	Low	Medium	High
-Interpretability	High	Medium - Low	High	Medium	Medium-Low
-Training Speed	Fast	Medium	Slow	Medium	Slow
-Memory Usage	Low	Medium - High	High	Low	Medium – High
-Handling Non-Linearity	Poor	Good	Good	Poor	Excellent
-Robustness	Medium	High	Low	High	High
-Feature Importance	Yes	Yes	No	No	No
+This study employed five different traditional machine learning methods as classifiers based on practical experience and general knowledge. The methods included  Logistic Regression (LR), Random Forest (RF), K-Nearest Neighbor (KNN), and Support Vector Machine (SVM) with both linear and radial basic functions (rbf), used to classify various scenarios of vector-borne diseases. 
+
+# 4.3. Fine-tuning 
+The current study utilized fine-tuning as an optimization process to enhance the performance of ImageNet’s final layers as classifiers for the target domain (i.e., vector-borne diseases). During feature extraction, the flattened and connected layers of ImageNet were removed and replaced by either new fully connected layers or by traditional machine learning methods acting as classifiers (Sarkar et al., 2018).The hyperparameters for these layers were selected through random screening based on empirical knowledge. Additionally, the GridSearch function in the Python Scikit-Learn package was employed to identify the optimal parameters for traditional machine learning classifiers (Morid et al., 2020). 
 
 # 5. Python codes 
+The Python codes uploaded in this blog cover time-series image generation using different encoding methods mentioned above, and the deployment of differnt machine learning agorithms to anticipate vector-borne diseases. 
+- Image generation
+- Machine learning models
+- Fine-tuning enhancing models
+# 6. Data and images examples
 
 
 
