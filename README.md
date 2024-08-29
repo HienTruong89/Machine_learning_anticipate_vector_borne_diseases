@@ -1,8 +1,15 @@
-# AI_pinelines_anticipate_vector_borne_diseases
+# Development of AI pinelines for anticipating vector-borne diseases
+This repository provides a consise overview of the mathematical methods and workflows involved in a AI pineline designed to predict vector-borne dieases. 
+Significance: 
+- Image-Based Time-Series Conversion: Traditional time-series data are transformed into images using various imaged-based techniques.
+- Feature Extraction With ImageNet: Convolutional neural networks pre-trained on ImageNet are used to extract features from these images.
+- Machine Learning Application: Multiple machine learning algorithms are applied to anticipate stages of vector-borne diseases. 
+
 
 # 1. Introduction
-Vector-borne diseases are illness transmitted to human by infected mosquitoes, ticks, and fleas. These diseases are highly concerned by public health due to their dynamic increases corresponding to climate change.
-The current project investigates the potential of different AI pinelines to anticipate vector borne diseases. Over the past decades, many studies have been conducted to predict the epidemic of these deseases, but mostly using collected time-series datapoints. In the current project, we focus on anticipating vector-borne deseases based on image-based time-series representation. The rapid development of AI generations on image recognition and detection could help to predict the outbreaks. 
+Vector-borne diseases, transmitted to human by infected mosquitoes, ticks, and fleas, pose significantly public health concerns, especially with the increasing incidence linked to climate change.
+This project explores the potential of AI pinelines to predict vector-borne disease outbreaks. While many studies over the past decades have focused on predicting epidemic or early warning signals of tipping points using traditional time-series data, our approach shifts to a novel image-based time-series representation. 
+Leveraging the advancements in AI for image recognition and detection, this project aims to enhance the prediction of impending disease outbreaks. 
 
 # 2. Image-based time-series representation
 Three different encoding methods, including the recurrent plot (PR), Gramian angular field (GAF), and Markov transition field (MTF), to generate time-series image-based representations from scalar time-series data were investigated. 
@@ -49,7 +56,7 @@ Figure 2. Fusion of the three recurrent plots (a) and a combo of GASF, GADG, and
 # 4. AI pinelines 
 AI pineline refers to structured workflows utilized to develop, deploy and maintain machine learning models. It consists of various processes including data collection, data processing, data extraction , model training, model evaluation, model deployment, monitoring and maintenance, and feedback loop. Integration of AI pinelines help ensure AI solutions manageble and that models are robust, scalable and maintainable. 
 
-The current study explores various AI pipelines aimed at anticipating stages of vector-borne diseases. The key innovations induce employing diverse encoding methods to transform scalar time-series data into image-based representations and leveraging transfer learning from feature extractors to enhance the prediction of mosquito vector-borne outbreaks. 
+The current study proposes various AI pipelines aimed at anticipating stages of vector-borne diseases. The key innovations induce employing diverse encoding methods to transform scalar time-series data into image-based representations and leveraging transfer learning from feature extractors to enhance the prediction of mosquito vector-borne outbreaks. 
 
 
 ![image](https://github.com/user-attachments/assets/dead9dbb-9f6b-4d17-8b82-f538de266aae)
@@ -64,7 +71,7 @@ We employed six common ImageNet architectures in the current study, namely, VGG1
 This study employed six different traditional machine learning methods as classifiers based on practical experience and general knowledge. The methods included  Logistic Regression (LR), Random Forest (RF), Extreme Gradient Boosting (XGB), K-Nearest Neighbor (KNN), and Support Vector Machine (SVM) with both linear and radial basic functions (rbf), used to classify various scenarios of vector-borne diseases. 
 
 # 4.3. Fine-tuning 
-The current study utilized fine-tuning as an optimization process to enhance the performance of ImageNet’s final layers as classifiers for the target domain (i.e., vector-borne diseases). During feature extraction, the flattened and connected layers of ImageNet were removed and replaced by either new fully connected layers or by traditional machine learning methods acting as classifiers (Sarkar et al., 2018).The hyperparameters for these layers were selected through random screening based on empirical knowledge. Additionally, the GridSearch function in the Python Scikit-Learn package was employed to identify the optimal parameters for traditional machine learning classifiers (Morid et al., 2020). 
+The current study utilized fine-tuning technique as an optimization process to enhance the performance of ImageNet’s final layers as classifiers for the target domain (i.e., vector-borne diseases). During feature extraction, the flattened and connected layers of ImageNet were removed and replaced by either new fully connected layers or by traditional machine learning methods acting as classifiers (Sarkar et al., 2018).The hyperparameters for these layers were selected through random screening based on empirical knowledge. Additionally, the GridSearch function in the Python Scikit-Learn package was employed to identify the optimal parameters for traditional machine learning classifiers (Morid et al., 2020). 
 
 # 5. Python codes 
 The Python codes uploaded in this blog cover time-series image generation using different encoding methods mentioned above, and the deployment of differnt machine learning agorithms to anticipate vector-borne diseases. 
@@ -72,6 +79,8 @@ The Python codes uploaded in this blog cover time-series image generation using 
 - Machine learning models
 - Fine-tuning enhancing models
 # 6. Data and images examples
+
+# 7. Workflow 
 
 
 
