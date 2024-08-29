@@ -1,4 +1,4 @@
-# Development of AI pinelines for anticipating vector-borne diseases
+# Development of AI Pinelines for Anticipating Vector-Borne Diseases
 This repository provides a consise overview of the mathematical methods and workflows involved in a AI pineline designed to predict vector-borne dieases. 
 Significance: 
 - Image-Based Time-Series Conversion: Traditional time-series data are transformed into images using various imaged-based techniques.
@@ -11,7 +11,7 @@ Vector-borne diseases, transmitted to human by infected mosquitoes, ticks, and f
 This project explores the potential of AI pinelines to predict vector-borne disease outbreaks. While many studies over the past decades have focused on predicting epidemic or early warning signals of tipping points using traditional time-series data, our approach shifts to a novel image-based time-series representation. 
 Leveraging the advancements in AI for image recognition and detection, this project aims to enhance the prediction of impending disease outbreaks. 
 
-# 2. Image-based time-series representation
+# 2. Image-Based Time-Series Representation
 Three different encoding methods, including the recurrent plot (PR), Gramian angular field (GAF), and Markov transition field (MTF), to generate time-series image-based representations from scalar time-series data were investigated. 
 For n observations, the time series x(t) is written below. 
                                                                    x(t) = { x1, x2, x3, ….,xn}
@@ -45,18 +45,22 @@ where MTF [i,j] represents the probability of transitioning from state i to stat
 Overall, the MTF method illustrates the relationship between two arbitrary points in the time series and how frequently these transitions occur. The MTF is sensitive to the choice of bin levels, which can affect the granularity of the original time series. 
 
 # 3. Early fusion approach for time-series images
-The current study employed a fusion of different encoding methods (RP, GASF, GADF, and MTF) to unravel complementary information embedded in time-series image representations and among the classifiers used (Dias, Pinto, et al., 2020). The early fusion method was implemented by assigning each encoded image representation to one of the three color channels of an RGB image. While this approach has been applied in other scientific research fields such as phenology (Dias, Pinto, et al., 2020; Faria et al., 2016), it has not been previously reported for time-series vector-borne diseases. 
-Mosquito vector-borne diseases typically consist of five compartments: mosquitoes infected (MI), birds infected (BI), birds recovered (BR), quinines infected (QI), and humans infected (HI). This study focused on three primary compartments: MI, BI, and BR. The time-series data of each of the three components were transformed using different encoding methods, and each encoded image was then fused into an RGB image. The order of fusion of each compartment plays a crucial role in generating different RGB images. 
-This research specifically examines the fusion of three recurrent plots into an RGB image and a combination of GASF, GADF, and MTF into an RGB image. For the combination fusion, the MI, BI, and BR compartments were assigned to the blue, green, and red channels, respectively.  
+The current study employed a early fusion strategy that integrates different encoding methods Recurrent Plot (RP), Gramian Angular Summation Field (GASF), Gramian Angular Difference Field (GADF), and Markov Transition Field (MTF) to capture complementary information embedded in time-series image representations.
+This approach, adapted from the work of Dias, Pinto, et al., (2020), involves assigning each encoded image representation to one of the three color channels of an RGB image. While this technique has been utilized in the fields such as phenology (Dias, Pinto, et al., 2020; Faria et al., 2016), it has not been previously applied for predicition of vector-borne diseases using time-series. 
+
+Mosquito vector-borne diseases typically involve five key compartments: mosquitoes infected (MI), birds infected (BI), birds recovered (BR), quinines infected (QI), and humans infected (HI). This study focuses on three primary compartments: MI, BI, and BR. 
+The time-series data for each compartment were encoded using different encoding methods, and these encoded images were fused into an RGB image. The orders in which the compartment are assgined to the RGB channels significantly influences the resulting image representations.  
+
+This research specifically explores the fusion of three recurrent plots into an RGB image, as well as a combination of GASF, GADF, and MTF into an RGB image. For all early fusion, the MI, BI, and BR compartments were mapped to the blue, green, and red channels, respectively.  
 
 ![image](https://github.com/user-attachments/assets/400d8828-c45b-475e-8c57-c0d3fd3519b4)
 
 Figure 1. Fusion of the three recurrent plots (a) and a combo of GASF, GADG, and MTF (b) into an RGB image
 
 # 4. AI pinelines 
-AI pineline refers to structured workflows utilized to develop, deploy and maintain machine learning models. It consists of various processes including data collection, data processing, data extraction , model training, model evaluation, model deployment, monitoring and maintenance, and feedback loop. Integration of AI pinelines help ensure AI solutions manageble and that models are robust, scalable and maintainable. 
+AI pineline refers to structured workflows utilized to develop, deploy and maintain machine learning models. It encompasses various processes including data collection, data processing, feature extraction, model training, evaluation, deployment, monitoring and maintenance, and feedback loop. Integration of AI pinelines helps ensure AI solutions manageble and that models are robust, scalable and maintainable. 
 
-The current study proposes various AI pipelines aimed at anticipating stages of vector-borne diseases. The key innovations induce employing diverse encoding methods to transform scalar time-series data into image-based representations and leveraging transfer learning from feature extractors to enhance the prediction of mosquito vector-borne outbreaks. 
+The current study proposes various AI pipelines aimed at anticipating different stages of vector-borne diseases. Key innovations induce employing diverse encoding methods to transform scalar time-series data into image-based representations and leveraging transfer learning from feature extractors to enhance the prediction of mosquito vector-borne outbreaks. 
 
 
 ![image](https://github.com/user-attachments/assets/dead9dbb-9f6b-4d17-8b82-f538de266aae)
@@ -64,17 +68,19 @@ The current study proposes various AI pipelines aimed at anticipating stages of 
 Figure 2: Encoding scalar time series data using the recurrent plot method and a fusion of three recurrent plots into either a recurrent plot image (ReIM) or channels of a red-green-blue image (RGB), and fit into different machine learning models for prediction of tipping point or stable events.
 
 # 4.1. Feature extractors
-In this study, we utilized different ImageNet architectures as feature extractors for the time-series images of vector-borne diseases. ImageNet is a well-known convolutional neural network trained on a large visual dataset comprising millions of images for image recognition tasks (Lukas et al., 2022). In our AI pipelines, ImageNet acts as a feature extractor, utilizing only the pre-trained networks, while keeping the flattened and classifying layers frozen. Consequently, the feature extractor performs the learning process and provides outputs as flattened deep features, which are then used as inputs for traditional machine learning classifiers (Ebrahim et al., 2019). 
-We employed six common ImageNet architectures in the current study, namely, VGG16, ResNet50, ResNet101, ResNet152, Xception, and Efficient_NetB5. These architectures differ in their neural network designs and transfer learning algorithms (Morid et al., 2020). Utilizing these pre-trained models can offer different approaches for training vector-borne time-series images, possibly reducing training time and improving performance compared to building neural networks from scratch. For more information on ImageNet and its advantages, and disadvantages, please refer to the Keras Applications on the Keras Applications website. 
+This study utilized various ImageNet architectures as feature extractors for the time-series images related to vector-borne diseases. ImageNet is a well-known convolutional neural networks trained on a vast visual dataset comprising millions of images, primarily used for image recognition tasks (Lukas et al., 2022). 
+In our AI pipelines, ImageNet function acts as a feature extractor, with its pre-trained networks used, while keeping the flattened and classifying layers frozen. The feature extractor generates flattened deep features, which are then input into traditional machine learning classifiers (Ebrahim et al., 2019). 
+
+We employed six common ImageNet architectures in the current study, namely, VGG16, ResNet50, ResNet101, ResNet152, Xception, and Efficient_NetB5. These architectures differ in their neural network designs and transfer learning algorithms (Morid et al., 2020). Utilizing these pre-trained models can offer different approaches for training can reduce training time and improve performance compared to building neural networks from scratch. For more information on ImageNet and its advantages, and disadvantages, please refer to the Keras Applications on the Keras Applications website. 
 
 # 4.2. Traditional machine learning (ML)  
-Six different machine learning argorithms: Logistic Regression (LR), Random Forest (RF), Extreme Gradient Boosting (XGB), K-Nearest Neighbor (KNN), and Support Vector Machine (SVM) with both linear and radial basic functions (rbf), were used to classify various scenarios of vector-borne diseases. The choice of applying these ML techniques is based on practical experience and general knowledge. 
+Six different machine learning argorithms: Logistic Regression (LR), Random Forest (RF), Extreme Gradient Boosting (XGB), K-Nearest Neighbor (KNN), and Support Vector Machine (SVM) with both linear and radial basic functions (rbf), were employed to classify various scenarios of vector-borne diseases. The choice of these ML techniques is based on practical experience and general knowledge of their effectiveness. 
 
 # 4.3. Fine-tuning 
-The current study utilized fine-tuning technique as an optimization process to enhance the performance of ImageNet’s final layers as classifiers for the target domain (i.e., vector-borne diseases). During feature extraction, the flattened and connected layers of ImageNet were removed and replaced by either new fully connected layers or by traditional machine learning methods acting as classifiers (Sarkar et al., 2018).The hyperparameters for these layers were selected through random screening based on empirical knowledge. Additionally, the GridSearch function in the Python Scikit-Learn package was employed to identify the optimal parameters for traditional machine learning classifiers (Morid et al., 2020). 
+Fine-tuning is used in this study as an optimization technique to enhance the performance of ImageNet’s final layers when adapted as classifiers for vector-borne diseases. During feature extraction, the flattened and connected layers of ImageNet were removed and replaced by either new fully connected layers or by traditional machine learning methods serving as classifiers (Sarkar et al., 2018). Hyperparameters for these layers were selected through random screening based on empirical knowledge. Additionally, the GridSearch function in the Python Scikit-Learn package was employed to identify the optimal parameters for traditional machine learning classifiers (Morid et al., 2020). 
 
 # 5. Python codes 
-The Python codes uploaded in this blog consist of time-series image generators using different encoding methods mentioned above, and the deployment of differnt machine learning agorithms to anticipate vector-borne diseases. 
+The Python codes provided in this repository includes time-series image generators using aforementioned encoding methods mentioned, as well as the deployment of differnt machine learning agorithms to anticipate vector-borne diseases. 
 - Image generators
 - Machine learning models
 - Fine-tuning enhancing models
