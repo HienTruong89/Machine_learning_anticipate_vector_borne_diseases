@@ -1,11 +1,7 @@
 # Project Abstract
-This repository provides Machine Learning (ML) strategies to predict disease stages using time-series and temporal image data; applied early and late fusion approaches.
-
+This repository provides Machine Learning (ML) strategies for predicting disease stages using time-series data and temporal image representations, leveraging both early and late fusion techniques.
 Methodology:
-A synthetic dataset of time-series was generated based on SIR-like epidemiological compartmental models. Two classification approaches - early fusion and late fusion - were applied on time-series and temporal image data to predict disease stages (e.g. low, medium, and high risk leading to outbreaks). 
-This project employed Standardized Euclidean Distance Recurrent Plot, Gramian Angular Field (Summation & Difference), and Markov Transition Field to encode time-series into image data; then fused images into RGB formats to enhance feature representation. 
-Temporal images was then extracted dominant features using pre-trained models on ImageNet. Then different ML algorithms are applied on feature extracts or time-series data to anticipate stages of vector-borne diseases. 
-
+A synthetic time-series dataset was generated based on SIR-like epidemiological compartmental models. Two classification strategies—early fusion and late fusion—were applied to time-series and temporal image data to predict disease stages (e.g., low, medium, and high risk of outbreaks). Time-series data were transformed into images using Standardised Euclidean Distance Recurrence Plots, Gramian Angular Fields (Summation & Difference), and Markov Transition Fields. These encoded images were combined into RGB formats to enrich feature representation. Dominant features from temporal images were extracted using pre-trained ImageNet models. Finally, various ML algorithms were applied to either the extracted image features or the raw time-series data to anticipate stages of vector-borne diseases.
 
 # 1. Introduction
 Vector-borne diseases (e.g. West Nile Virus), transmitted to human by infected mosquitoes, ticks, and fleas, pose significantly public health concerns, especially with the increasing incidence linked to climate change.
