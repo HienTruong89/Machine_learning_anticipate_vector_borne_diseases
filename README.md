@@ -1,5 +1,5 @@
 # Development of AI Pinelines for Anticipating Vector-Borne Diseases
-This repository provides a consise overview of the mathematical methods and workflows involved in a AI pineline designed to predict vector-borne dieases. 
+This repository provides Machine Learning approaches to anticipate vector-borne diease outbreaks. 
 Significance: 
 - Image-Based Time-Series Conversion: Traditional time-series data are transformed into images using various imaged-based techniques.
 - Feature Extraction With ImageNet: Convolutional neural networks pre-trained on ImageNet are used to extract features from these images.
