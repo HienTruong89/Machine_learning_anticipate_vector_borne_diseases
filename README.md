@@ -1,5 +1,6 @@
 # Project Abstract
 This repository provides Machine Learning (ML) strategies to predict disease stages using time-series and temporal image data; applied early and late fusion approaches.
+
 Methodology: A synthetic dataset of time-series was generated based on SIR-like epidemiological compartmental models. Two classification approaches - early fusion and late fusion - were applied on time-series and temporal image data to predict disease stages (e.g. low, medium, and high risk leading to outbreaks). 
 This project employed Standardized Euclidean Distance Recurrent Plot, Gramian Angular Field (Summation & Difference), and Markov Transition Field to encode time-series into image data; then fused images into RGB formats to enhance feature representation. 
 Temporal images was then extracted dominant features using pre-trained models on ImageNet. Then different Machine Learning algorithms are applied on feature extracts or time-series data to anticipate stages of vector-borne diseases. 
