@@ -60,7 +60,7 @@ This research specifically explores the fusion of three recurrent plots into an 
 Figure 1. Fusion of the three recurrent plots (a) and a combo of GASF, GADG, and MTF (b) into an RGB image
 
 # 4. Late fusion approach
-
+Each of three image channels (RGB image) was modelled separatedly using MLP and then final classification is decided based on majority voting.  
 # 5. Machine learning workflow 
 The current study proposes achine learning workflow consisting of data collection, data processing, feature extraction, model training, and evaluation. 
 Key innovation induces employing diverse encoding methods to transform scalar time-series data into image-based representations and leveraging transfer learning from feature extractors to enhance the prediction of mosquito vector-borne outbreaks. 
