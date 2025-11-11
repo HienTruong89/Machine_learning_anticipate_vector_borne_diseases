@@ -1,14 +1,15 @@
 # Project Abstract
 This repository provides Machine Learning (ML) strategies to predict disease stages using time-series and temporal image data; applied early and late fusion approaches.
 
-Methodology: A synthetic dataset of time-series was generated based on SIR-like epidemiological compartmental models. Two classification approaches - early fusion and late fusion - were applied on time-series and temporal image data to predict disease stages (e.g. low, medium, and high risk leading to outbreaks). 
+Methodology:
+A synthetic dataset of time-series was generated based on SIR-like epidemiological compartmental models. Two classification approaches - early fusion and late fusion - were applied on time-series and temporal image data to predict disease stages (e.g. low, medium, and high risk leading to outbreaks). 
 This project employed Standardized Euclidean Distance Recurrent Plot, Gramian Angular Field (Summation & Difference), and Markov Transition Field to encode time-series into image data; then fused images into RGB formats to enhance feature representation. 
-Temporal images was then extracted dominant features using pre-trained models on ImageNet. Then different Machine Learning algorithms are applied on feature extracts or time-series data to anticipate stages of vector-borne diseases. 
+Temporal images was then extracted dominant features using pre-trained models on ImageNet. Then different ML algorithms are applied on feature extracts or time-series data to anticipate stages of vector-borne diseases. 
 
 
 # 1. Introduction
 Vector-borne diseases (e.g. West Nile Virus), transmitted to human by infected mosquitoes, ticks, and fleas, pose significantly public health concerns, especially with the increasing incidence linked to climate change.
-This project explores the potential of Machine Learning approaches to forcast vector-borne disease outbreaks. 
+This project explores the potential of ML approaches to anticipate vector-borne disease outbreaks. 
 While many studies over the past decades have focused on predicting epidemic or early warning signals of tipping points using traditional time-series data, our approach shifts to a novel image-based time-series representation. 
 Leveraging the advancements in Artificial Intelligence for image recognition and detection, this project aims to enhance the prediction of impending disease outbreaks. 
 
@@ -58,7 +59,9 @@ This research specifically explores the fusion of three recurrent plots into an 
 
 Figure 1. Fusion of the three recurrent plots (a) and a combo of GASF, GADG, and MTF (b) into an RGB image
 
-# 4. Machine learning workflow 
+# 4. Late fusion approach
+
+# 5. Machine learning workflow 
 The current study proposes achine learning workflow consisting of data collection, data processing, feature extraction, model training, and evaluation. 
 Key innovation induces employing diverse encoding methods to transform scalar time-series data into image-based representations and leveraging transfer learning from feature extractors to enhance the prediction of mosquito vector-borne outbreaks. 
 
@@ -67,23 +70,23 @@ Key innovation induces employing diverse encoding methods to transform scalar ti
 
 Figure 2: Encoding scalar time series data using the recurrent plot method and a fusion of three recurrent plots into either a recurrent plot image (ReIM) or channels of a red-green-blue image (RGB), and fit into different machine learning models for prediction of tipping point or stable events.
 
-# 4.1. Feature extractors
+# 5.1. Feature extractors
 This study utilized various ImageNet architectures as feature extractors for the time-series images related to vector-borne diseases. ImageNet is a well-known convolutional neural networks trained on a vast visual dataset comprising millions of images, primarily used for image recognition tasks (Lukas et al., 2022). 
 In our AI pipelines, ImageNet function acts as a feature extractor, with its pre-trained networks used, while keeping the flattened and classifying layers frozen. The feature extractor generates flattened deep features, which are then input into traditional machine learning classifiers (Ebrahim et al., 2019). 
 
 We employed six common ImageNet architectures in the current study, namely, VGG16, ResNet50, ResNet101, ResNet152, Xception, and Efficient_NetB5. These architectures differ in their neural network designs and transfer learning algorithms (Morid et al., 2020). 
 Utilizing these pre-trained models can offer different approaches for training can reduce training time and improve performance compared to building neural networks from scratch. For more information on ImageNet and its advantages, and disadvantages, please refer to the Keras Applications on the Keras Applications website. 
 
-# 4.2. Machine learning 
+# 5.2. Machine learning 
 Six different machine learning argorithms: Logistic Regression (LR), Random Forest (RF), Extreme Gradient Boosting (XGB), K-Nearest Neighbor (KNN), Support Vector Machine (SVM) with both linear and radial basic functions (rbf), Multi-layer Perceptron (MLP) were employed on image data to classify three scenarios of vector-borne diseases. 
 On constrast, MOMENT, Lag_Llama, and LSTM are implemented on time-series data 
 The choice of these ML techniques is based on practical experience and general knowledge of their effectiveness. 
-# 4.3. Deep learning 
+# 5.3. Deep learning 
 LSTM-1D-CNN was used for both time-series and image data. 
-# 4.3. Fine-tuning 
+# 5.4. Fine-tuning 
 Fine-tuning is used in this study as an optimization technique to enhance the performance of ImageNet’s final layers when adapted as classifiers for vector-borne diseases. During feature extraction, the flattened and connected layers of ImageNet were removed and replaced by either new fully connected layers or by traditional machine learning methods serving as classifiers (Sarkar et al., 2018). Hyperparameters for these layers were selected through random screening based on empirical knowledge. Additionally, the GridSearch function in the Python Scikit-Learn package was employed to identify the optimal parameters for traditional machine learning classifiers (Morid et al., 2020). 
 
-# 5. Python codes 
+# 6. Python codes 
 The Python codes provided in this repository includes time-series image generators using aforementioned encoding methods mentioned, as well as the deployment of differnt machine learning agorithms to anticipate vector-borne diseases. 
 - Image generators
 - Machine learning models
