@@ -28,11 +28,11 @@ le=LabelEncoder()
 
 # Import data and label paths
 data_csv_paths = [
-    "C:/Users/truon011/OneDrive - Wageningen University & Research/Wageningen UR _ Research_Work/Project_July_Nov_24/Raw_data_29_7_24/Data_random_model_3classes/Three_compartments/simu_Ba_i_3c_T.csv",
-    "C:/Users/truon011/OneDrive - Wageningen University & Research/Wageningen UR _ Research_Work/Project_July_Nov_24/Raw_data_29_7_24/Data_random_model_3classes/Three_compartments/simu_Ba_r_3c_T.csv",
-    "C:/Users/truon011/OneDrive - Wageningen University & Research/Wageningen UR _ Research_Work/Project_July_Nov_24/Raw_data_29_7_24/Data_random_model_3classes/Three_compartments/simu_Ma_i_3c_T.csv"
+    "C:/Users/truon011/simu_Ba_i_3c_T.csv",
+    "C:/Users/truon011/simu_Ba_r_3c_T.csv",
+    "C:/Users/truon011/simu_Ma_i_3c_T.csv"
 ]
-label_csv_path = "C:/Users/truon011/OneDrive - Wageningen University & Research/Wageningen UR _ Research_Work/Project_July_Nov_24/Raw_data_29_7_24/Data_random_model_3classes/labels_3c.csv"
+label_csv_path = "C:/Users/truon011/labels_3c.csv"
 
 
 def load_csv_files(csv_paths):
