@@ -82,11 +82,15 @@ LSTM-1D-CNN was used for both time-series and image data.
 # 5.4. Fine-tuning 
 Fine-tuning is used in this study as an optimization technique to enhance the performance of ImageNet’s final layers when adapted as classifiers for vector-borne diseases. During feature extraction, the flattened and connected layers of ImageNet were removed and replaced by either new fully connected layers or by traditional machine learning methods serving as classifiers (Sarkar et al., 2018). Hyperparameters for these layers were selected through random screening based on empirical knowledge. Additionally, the GridSearch function in the Python Scikit-Learn package was employed to identify the optimal parameters for traditional machine learning classifiers (Morid et al., 2020). 
 
+# 7. Tools and Environment 
+Python 3.11 on WUR’s High-Performance Computing Cluster (Anunna) for data processing, modeling, and validation.
+
 # 6. Python codes 
 The Python codes provided in this repository includes time-series image generators using aforementioned encoding methods mentioned, as well as the deployment of differnt machine learning agorithms to anticipate vector-borne diseases. 
 - Image generators
 - Machine learning models
 - Fine-tuning enhancing models
+
 
 
 
