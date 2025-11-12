@@ -56,7 +56,8 @@ This research specifically explores the fusion of three recurrent plots into an 
 Figure 1. Fusion of the three recurrent plots (a) and a combo of GASF, GADG, and MTF (b) into an RGB image
 
 # 4. Late fusion approach
-Each of three image channels (RGB image) was modelled separatedly using MLP and then final classification is decided based on majority voting.  
+Each variable of three image channels (RGB image) was modelled separatedly using ML and then fused decision to make a final classification based on majority voting.  
+
 # 5. Machine learning workflow 
 The current study proposes achine learning workflow consisting of data collection, data processing, feature extraction, model training, and evaluation. 
 Key innovation induces employing diverse encoding methods to transform scalar time-series data into image-based representations and leveraging transfer learning from feature extractors to enhance the prediction of mosquito vector-borne outbreaks. 
@@ -68,24 +69,26 @@ Figure 2: Encoding scalar time series data using the recurrent plot method and a
 
 # 5.1. Feature extractors
 This study utilized various ImageNet architectures as feature extractors for the time-series images related to vector-borne diseases. ImageNet is a well-known convolutional neural networks trained on a vast visual dataset comprising millions of images, primarily used for image recognition tasks (Lukas et al., 2022). 
-In our AI pipelines, ImageNet function acts as a feature extractor, with its pre-trained networks used, while keeping the flattened and classifying layers frozen. The feature extractor generates flattened deep features, which are then input into traditional machine learning classifiers (Ebrahim et al., 2019). 
+In this study, ImageNet function acts as a feature extractor, with its pre-trained networks used, while keeping the flattened and classifying layers frozen. The feature extractor generates flattened deep features, which are then input into machine learning classifiers (Ebrahim et al., 2019). 
 
-We employed six common ImageNet architectures in the current study, namely, VGG16, ResNet50, ResNet101, ResNet152, Xception, and Efficient_NetB5. These architectures differ in their neural network designs and transfer learning algorithms (Morid et al., 2020). 
+We employed seven common ImageNet architectures in the current study, namely, ViT32, VGG16, ResNet50, ResNet101, ResNet152, Xception, and Efficient_NetB5. These architectures differ in their neural network designs and transfer learning algorithms (Morid et al., 2020). 
 Utilizing these pre-trained models can offer different approaches for training can reduce training time and improve performance compared to building neural networks from scratch. For more information on ImageNet and its advantages, and disadvantages, please refer to the Keras Applications on the Keras Applications website. 
 
 # 5.2. Machine learning 
 Six different machine learning argorithms: Logistic Regression (LR), Random Forest (RF), Extreme Gradient Boosting (XGB), K-Nearest Neighbor (KNN), Support Vector Machine (SVM) with both linear and radial basic functions (rbf), Multi-layer Perceptron (MLP) were employed on image data to classify three scenarios of vector-borne diseases. 
 On constrast, MOMENT, Lag_Llama, and LSTM are implemented on time-series data 
 The choice of these ML techniques is based on practical experience and general knowledge of their effectiveness. 
+
 # 5.3. Deep learning 
-LSTM-1D-CNN was used for both time-series and image data. 
+1D-CNN-LSTM was used for both time-series and image data. 
+
 # 5.4. Fine-tuning 
 Fine-tuning is used in this study as an optimization technique to enhance the performance of ImageNet’s final layers when adapted as classifiers for vector-borne diseases. During feature extraction, the flattened and connected layers of ImageNet were removed and replaced by either new fully connected layers or by traditional machine learning methods serving as classifiers (Sarkar et al., 2018). Hyperparameters for these layers were selected through random screening based on empirical knowledge. Additionally, the GridSearch function in the Python Scikit-Learn package was employed to identify the optimal parameters for traditional machine learning classifiers (Morid et al., 2020). 
 
-# 7. Tools and Environment 
+# 6. Tools and Environment 
 Python 3.11 on WUR’s High-Performance Computing Cluster (Anunna) for data processing, modeling, and validation.
 
-# 6. Python codes 
+# 7. Python codes 
 The Python codes provided in this repository includes time-series image generators using aforementioned encoding methods mentioned, as well as the deployment of differnt machine learning agorithms to anticipate vector-borne diseases. 
 - Image generators
 - Machine learning models
