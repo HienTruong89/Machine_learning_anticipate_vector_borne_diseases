@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import os
 
 import os
-os.chdir('C:/Users/truon011/OneDrive - Wageningen University & Research/Wageningen UR _ Research_Work/Project_July_Nov_24/Raw_data_10_9_24/Three_compartments')
+os.chdir('C:/Users/truon011/Raw_data_10_9_24/Three_compartments')
 directory='colorimage'
 
 class TimeSeriesAnalyzer:
