@@ -22,8 +22,8 @@ from sklearn.model_selection import KFold
 from PIL import Image
 
 # Define constants for image folder and label paths, and image size
-IMAGE_FOLDER_PATH = "C:/Users/truon/OneDrive/onenote/Wageningen UR _ Research_Work/Project_July_Nov_2024/Image data_29_7_24/RGB"
-LABELS_CSV_PATH = "C:/Users/truon/OneDrive/onenote/Wageningen UR _ Research_Work/Project_July_Nov_2024/Raw_data_29_7_24/Data_random_model_3classes/labels_3compartments.csv"
+IMAGE_FOLDER_PATH = "C:/Users/truon011/Image data_29_7_24/RGB"
+LABELS_CSV_PATH = "C:/Users/truon011/labels_3compartments.csv"
 IMAGE_SIZE = (224, 224)
 
 # Initialize scalers and encoders
@@ -325,4 +325,5 @@ if __name__ == "__main__":
 
     # Train and evaluate using batch processing
     create_and_evaluate_models_with_batches(data_folder_path, csv_file_path, VGG16_model, batch_size=500, epochs=5)
+
 
