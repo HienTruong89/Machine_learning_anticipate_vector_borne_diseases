@@ -150,7 +150,7 @@ class TimeSeriesAnalyzer:
 def main():
     """The main function to execute the time series analysis."""
     # Define the data directory
-    data_dir = 'C:/Users/truon011/OneDrive - Wageningen University & Research/Wageningen UR _ Research_Work/Python codes/Quentin codes/Data/Data_check/Quentin_data_split'
+    data_dir = 'C:/Users/truon011/Data_split'
     os.chdir(data_dir)
     
     # Define the data files
@@ -167,4 +167,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
