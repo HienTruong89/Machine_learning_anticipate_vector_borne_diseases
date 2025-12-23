@@ -91,8 +91,9 @@ Python 3.11 on WUR’s High-Performance Computing Cluster (Anunna) for data proc
 # 7. Python codes 
 The Python codes provided in this repository includes time-series image generators using aforementioned encoding methods mentioned, as well as the deployment of differnt machine learning agorithms to anticipate vector-borne diseases. 
 - Image generators
-- Machine learning models
+- Machine learning models with TensorFlow and PyTorch
 - Fine-tuning enhancing models
+# 8. Results 
 
 
 
