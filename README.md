@@ -94,7 +94,7 @@ The Python codes provided in this repository includes time-series image generato
 - Machine learning models with TensorFlow and PyTorch
 - Fine-tuning enhancing models
 # 8. Examples of Results 
-The fine-tuned vit-MLP models for low and high risks achieved 73% accuracy while the prediction of low, medium and high risks got 66 %. 
+The fine-tuned vit-MLP models for low and high risks achieved 73% accuracy while the prediction of low (A), medium (B) and high (C) risks got 66 % accuracy. 
 The explanation of the UMAP of three classed model. 
 
 <img width="642" height="497" alt="Figure umap_3c_removed_small_cluster" src="https://github.com/user-attachments/assets/e7776a1e-1504-445a-876c-c65e67eb2396" />
