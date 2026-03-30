@@ -97,12 +97,13 @@ The Python codes provided in this repository includes time-series image generato
 The fine-tuned vit-MLP models for low and high risks achieved 73% accuracy while the prediction of low (A), medium (B) and high (C) risks got 66 % accuracy. 
 The classification was explained by UMAP plots for two and three classes. 
 
-<img width="642" height="497" alt="Figure umap_2c_removed_small_cluster" src="https://github.com/user-attachments/assets/8feb83e5-300e-4696-be58-7993acbe99fc" />
 
+
+<img width="642" height="478" alt="Figure umap_2c_removed_small_clusterx" src="https://github.com/user-attachments/assets/c4dcd3b4-7f3d-4ab0-a995-c3672c4b4281" />
 
 Figure 3: The UMAP plot for two-classes model
 
 
-<img width="642" height="497" alt="Figure umap_3c_removed_small_cluster" src="https://github.com/user-attachments/assets/53ff3c0a-3abe-4cb0-a9bd-9970b2b360df" />
+<img width="642" height="478" alt="Figure umap_3c_removed_small_clusterx" src="https://github.com/user-attachments/assets/e7765c34-3fc8-42b5-8049-56923b097771" />
 
 Figure 4: The UMAP plot for three-classes model
