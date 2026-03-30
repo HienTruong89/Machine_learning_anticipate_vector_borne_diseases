@@ -95,13 +95,14 @@ The Python codes provided in this repository includes time-series image generato
 - Fine-tuning enhancing models
 # 8. Examples of Results 
 The fine-tuned vit-MLP models for low and high risks achieved 73% accuracy while the prediction of low (A), medium (B) and high (C) risks got 66 % accuracy. 
-The explanation of the UMAP of three classed model. 
+The classification was explained by UMAP plots for two and three classes. 
 
-<img width="642" height="497" alt="Figure umap_3c_removed_small_cluster" src="https://github.com/user-attachments/assets/e7776a1e-1504-445a-876c-c65e67eb2396" />
-
-                                      
+<img width="642" height="497" alt="Figure umap_2c_removed_small_cluster" src="https://github.com/user-attachments/assets/8feb83e5-300e-4696-be58-7993acbe99fc" />
 
 
+Figure 3: The UMAP plot for two-classes model
 
 
+<img width="642" height="497" alt="Figure umap_3c_removed_small_cluster" src="https://github.com/user-attachments/assets/53ff3c0a-3abe-4cb0-a9bd-9970b2b360df" />
 
+Figure 4: The UMAP plot for three-classes model
